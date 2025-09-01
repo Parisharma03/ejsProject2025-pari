@@ -1,0 +1,52 @@
+<%- include('./base/header.ejs') %>
+<%- include('./base/nav.ejs') %>
+  <div class="container">
+         <div class="alert text-center bg-warning my-3" style="color: black;">
+            <h4>Edit Student</h4>
+         </div>
+  </div>
+  <div class="addstu">
+             <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <form action="/edit/student/<%= student._id %>" method="post">
+                        <div>
+                            <label class="form-label">RollNo</label>
+                            <input type="text" class="form-control" name="RollNo" value="<%= student.RollNo %>">
+                        </div>
+                        <div>
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" name="Name" value="<%= student.Name %>">
+                        </div>
+                        <div>
+                            <label class="form-label">Father Name</label>
+                            <input type="text" class="form-control" name="FatherName" value="<%= student.FatherName %>">
+                        </div>
+                        <div>
+                            <label class="form-label"> Course</label>
+                            <input type="text" class="form-control" name="Course" value="<%= student.Course %>">
+                            </div>
+                            <div>
+                                <label class="form-label"> Branch</label>
+                                <select id="Branch" class="form-control" name="Branch" value="<%= student.Branch %>">
+                                <option value="Choose your branch">Choose your branch</option>
+                                <option value="CSE">CSE</option>
+                                <option value="AI">AI</option>
+                                <option value="IOT">IOT</option>
+                                <option value="EC">EC</option>
+                                <option value="ME">ME</option>
+                                </select>
+                            </div>
+                            <div>
+                            <label class="form-label"> Year Of Admission</label>
+                            <input type="text" class="form-control" name="YearOfAdmission" value="<%= student.YearOfAdmission %>">
+                            </div>
+                        <input type="submit" value="Edit Student" class="btn btn-warning w-100 my-3">
+                       
+                    </form>
+                </div>
+                <div class="col"></div>
+             </div>
+  </div>
+
+<%- include('./base/footer.ejs') %>

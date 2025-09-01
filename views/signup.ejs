@@ -1,0 +1,38 @@
+<%- include('./base/header.ejs') %>
+    <!-- <h1> we are going to start server side rendering </h1> -->
+     <div class="container">
+         <div class="alert text-center bg-primary my-3" style="color: white;">
+            <h4>Sign UP Form</h4>
+         </div>
+     </div>
+     <div class="container2">
+        <div class="row1">
+            <div class="col"></div>
+            <div class="col">
+                <form action="/add/user" method="post">
+                    <div>
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-control" name="FirstName"></input>
+                    </div>
+                     <div>
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-control" name="LastName"></input>
+                    </div>
+                     <div>
+                        <label class="form-label">Email</label>
+                        <input type="text" class="form-control" name="Email"></input>
+                    </div>
+                    <div>
+                        <label for="" class="form-label">Password</label>
+                        <input type="password" class="form-control" name="Password"></input>
+                    </div>
+                    <input type="submit" value="signin" class="btn btn-secondary w-100 my-3">
+                    <div>
+                        <a href="/" class="btn btn-danger w-100 my-1">login</a>
+                    </div>
+                </form>
+            </div>
+            <div class="col"></div>
+        </div>
+     </div>
+    <%- include('./base/footer.ejs') %>

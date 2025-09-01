@@ -1,0 +1,70 @@
+<%- include('./base/header.ejs') %>
+<%- include('./base/nav.ejs') %>
+  <div class="container">
+         <div class="alert text-center bg-warning my-3" style="color: black;">
+            <h4>Add Student</h4>
+         </div>
+  </div>
+  <div class="addstu">
+             <div class="row">
+                <div class="col"></div>
+                <div class="col">
+                    <form action="/add/student" method="post" enctype="multipart/form-data">
+                        <div>
+                            <label class="form-label">RollNo</label>
+                            <input type="text" class="form-control" name="RollNo">
+                        </div>
+                        <div>
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-control" name="Name">
+                        </div>
+                        <div>
+                            <label class="form-label">Father Name</label>
+                            <input type="text" class="form-control" name="FatherName">
+                        </div>
+                        <div>
+                            <label class="form-label"> Course</label>
+                            <input type="text" class="form-control" name="Course">
+                            </div>
+                            <div>
+                            <!-- <label class="form-label"> Branch</label>
+                            <input type="text" class="form-control" name="Branch">
+ -->
+
+
+
+
+                                <label class="form-label"> Branch</label>
+                                <select id="Branch" class="form-control" name="Branch">
+                                <option value="Choose your branch">Choose your branch</option>
+                                <option value="CSE">CSE</option>
+                                <option value="AI">AI</option>
+                                <option value="IOT">IOT</option>
+                                <option value="EC">EC</option>
+                                <option value="ME">ME</option>
+                                </select>
+
+
+
+
+
+                            </div>
+                            <div>
+                            <label class="form-label"> Year Of Admission</label>
+                            <input type="text" class="form-control" name="YearOfAdmission">
+                            </div>
+
+                            <div>
+                            <label class="form-label">Select Student Image</label>
+                            <input type="file" class="form-control" name="StudentImage"></input>
+                            </div>
+
+                        <input type="submit" value="Add Student" class="btn btn-warning w-100 my-3">
+                       
+                    </form> 
+                </div>
+                <div class="col"></div>
+             </div>
+  </div>
+
+<%- include('./base/footer.ejs') %>
