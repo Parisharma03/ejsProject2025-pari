@@ -23,3 +23,4 @@ async function makeAdmin() {
     }
     
 }
+module.exports=makeAdmin;
