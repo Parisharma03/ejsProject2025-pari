@@ -8,7 +8,7 @@ async function makeAdmin() {
           //  console.log('user updated....');
         }
         else{
-            let user=new user();
+            let user=new User();
             user.FirstName='Pari';
             user.LastName='Sharma';
             user.Email='pari@gmail.com';
