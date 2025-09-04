@@ -13,7 +13,10 @@ async function makeAdmin() {
             user.LastName='Sharma';
             user.Email='pari@gmail.com';
             let encryptedPassword=bcrypt.hashSync('123456',10);   //10 salty pass
-
+            user.Password=encryptedPassword;
+            user.userType='Admin';
+            await user.save();
+            console.log("user saved successfully");
         }
     }catch(err){
         console.log(err);
